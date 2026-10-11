@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "feishu-doc-to-rss",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-09-07",
+  "workers_dev": true,
+  "send_metrics": false,
+  "triggers": {
+    // UTC: Monday-Friday 02:30 = Asia/Shanghai Monday-Friday 10:30.
+    "crons": ["30 2 * * MON-FRI"]
+  },
+  "kv_namespaces": [
+    { "binding": "FEED_KV", "id": "00000000000000000000000000000000" }
+  ],
+  "vars": {
+    "FEED_TITLE": "飞书文档订阅",
+    "FEED_DESCRIPTION": "工作日新增文档",
+    "FEED_ITEMS": "50",
+    "INITIAL_ITEMS": "20",
+    "MAX_NEW_ITEMS": "5"
+  },
+  "observability": { "enabled": false }
+}

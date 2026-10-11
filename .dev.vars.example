@@ -1,0 +1,6 @@
+# Copy to .dev.vars for local use. Never commit real values.
+FEISHU_APP_ID=""
+FEISHU_APP_SECRET=""
+FEISHU_FOLDER_TOKEN=""
+# Generate a URL-safe random value of at least 32 characters; keep it private.
+FEED_TOKEN=""

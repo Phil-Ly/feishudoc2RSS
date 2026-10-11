@@ -1,0 +1,15 @@
+{
+  "name": "feishu-doc-to-rss",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:runtime": "node scripts/runtime-test.js",
+    "dev": "wrangler dev --local --test-scheduled",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "demo": "node scripts/demo.js"
+  },
+  "devDependencies": { "wrangler": "4.129.0", "miniflare": "5.20260903.0-alpha" }
+}
